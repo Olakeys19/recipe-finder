@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "bergstena"; /* Give your font a unique name */
+  src: url("bergstena_script/BergstenaDecorated_PERSONAL_USE_ONLY.otf")
+    format("opentype");
+  font-weight: normal; /* Define font weight if applicable */
+  font-style: normal; /* Define font style if applicable */
+}
+
+body {
+  background-color: hsl(193, 61%, 83%);
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.container {
+  display: block;
+  padding: 20px;
+}
+
+h1 {
+  font-family: "bergstena";
+  text-align: center;
+  font-size: 40px;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+}
+
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
