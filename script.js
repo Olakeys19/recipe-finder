@@ -1,3 +1,11 @@
+const query = "chicken";
+fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
+  .then((res) => res.json())
+  .then((data) => {
+    displayResults(data.meals);
+  })
+  .catch((err) => console.error(err));
+
 document.getElementById("searchBtn").addEventListener("click", () => {
   const query = document.getElementById("search").value;
   fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`)
