@@ -22,12 +22,20 @@ body {
 .container {
   display: block;
   /* padding: 20px; */
-  margin-top: -600px;
+  margin-top: -400px;
+}
+
+.bgv-container {
+  /* border: solid black; */
+  display: flex;
+  height: 400px;
 }
 
 .bgImg {
   height: auto;
   width: 100%;
+  /* decrease height but keep ratio */
+  object-fit: cover;
 }
 /* .background {
   background-image: url("/images/dish.jpg");
@@ -83,5 +91,5 @@ h1 {
 }
 
 .results-container {
-  margin-top: 400px;
+  margin-top: 200px;
 }
