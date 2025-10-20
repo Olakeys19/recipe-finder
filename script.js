@@ -100,6 +100,10 @@ function getDetails(id) {
         <p>${meal.strInstructions}</p>
       `;
     });
+  // scroll to details
+  document
+    .getElementById("recipeDetails")
+    .scrollIntoView({ behavior: "smooth" });
 }
 
 // Helper function to extract ingredients
