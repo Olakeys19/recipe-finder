@@ -68,9 +68,12 @@ function displayResults(meals) {
   meals.forEach((meal) => {
     const mealDiv = document.createElement("div");
     mealDiv.innerHTML = `
+    <div class="recipe">
       <h3>${meal.strMeal}</h3>
       <img src="${meal.strMealThumb}" width="200">
-      <button onclick="getDetails(${meal.idMeal})">View Details</button>
+      <button onclick="getDetails(${meal.idMeal})" id="viewDetailsBtn">View Details</button>
+      </div>
+      
     `;
     resultsDiv.appendChild(mealDiv);
   });
