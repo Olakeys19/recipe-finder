@@ -16,6 +16,52 @@ document.getElementById("searchBtn").addEventListener("click", () => {
     .catch((err) => console.error(err));
 });
 
+document.getElementById("clearBtn").addEventListener("click", () => {
+  document.getElementById("search").value = "";
+  document.getElementById("results").innerHTML = "";
+  document.getElementById("recipeDetails").innerHTML = "";
+});
+
+document.querySelector(".all").addEventListener("click", () => {
+  // fetch all meals
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
+    .then((res) => res.json())
+    .then((data) => {
+      displayResults(data.meals);
+    })
+    .catch((err) => console.error(err));
+});
+
+document.querySelector(".american").addEventListener("click", () => {
+  // filter by American cuisine
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=American`)
+    .then((res) => res.json())
+    .then((data) => {
+      displayResults(data.meals);
+    })
+    .catch((err) => console.error(err));
+});
+
+document.querySelector(".indian").addEventListener("click", () => {
+  // filter by Indian cuisine
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Indian`)
+    .then((res) => res.json())
+    .then((data) => {
+      displayResults(data.meals);
+    })
+    .catch((err) => console.error(err));
+});
+
+document.querySelector(".spanish").addEventListener("click", () => {
+  // filter by Spanish cuisine
+  fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=Spanish`)
+    .then((res) => res.json())
+    .then((data) => {
+      displayResults(data.meals);
+    })
+    .catch((err) => console.error(err));
+});
+
 function displayResults(meals) {
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";
